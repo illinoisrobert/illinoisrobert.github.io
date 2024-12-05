@@ -9,7 +9,7 @@ flowchart TD
         lswitch1("Switch 1<br/>aruba 3810m")
     subgraph OPTIONAL
         explain@{shape: text, label: "If this section is omitted, connect **Switch 2** directly to **Server**"}
-        lswitch3("Switch 3<br/>GS324T")
+        lswitch3("Switch 3<br/>netgear GS324T")
         tls("TLS Appliance<br/>progress loadmaster X3-NG")
     end
         server("Server")
