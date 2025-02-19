@@ -22,3 +22,31 @@ flowchart TD
     scollector("Collector Computer") o-- Promiscuous --o sswitch1 & sswitch2   
   end
 ```
+
+```mermaid
+sequenceDiagram
+    participant cu as Client User Mode
+    participant ck as Client Kernel Mode
+    participant nf as Network Fabric
+    participant sk as Server Kernel Mode
+    participant su as Server User Mode
+
+    loop
+        cu ->> cu: Encryption
+        cu ->> ck: sendto
+        ck ->> ck: packetizing 
+        ck ->> nf: net_dev_xmit
+        nf ->> sk: netif_receive_skb, et al
+        sk ->> sk: de-packetizing
+        sk ->> su: recvfrom
+        su ->> su: decryption
+        su ->> su: encryption
+        su ->> sk: sendto
+        sk ->> sk: packetizing
+        sk ->> nf: net_dev_xmit
+        nf ->> ck: netif_receive_skb
+        ck ->> ck: packetizing
+        ck ->> cu: recvfrom
+        cu ->> cu: decryption
+    end
+```
