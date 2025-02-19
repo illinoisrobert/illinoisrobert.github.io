@@ -23,7 +23,7 @@ sequenceDiagram
         sk ->> sk: packetizing
         sk ->> nf: net_dev_xmit
         nf ->> ck: netif_receive_skb
-        ck ->> ck: packetizing
+        ck ->> ck: de-packetizing
         ck ->> cu: recvfrom
         cu ->> cu: decryption
     end
