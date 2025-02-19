@@ -1,6 +1,7 @@
 ## illinoisrobert.github.io
 
 ```mermaid
+ 
 flowchart TD
   subgraph Logan
         client o--o lswitch1 o--o lrouter o--o lswitch2 o--o tls o--o lswitch3 o--o server
