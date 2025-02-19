@@ -4,9 +4,6 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script type="module">
-import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11.4.1/+esm'
-</script>
 
 
 {% seo %}
@@ -29,17 +26,9 @@ import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11.4.1/+esm'
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js" integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg=" crossorigin="anonymous"></script>
     <script>anchors.add();</script>
-    <script>
-var config = {
-    startOnLoad:true,
-    theme: 'forest',
-    flowchart:{
-            useMaxWidth:false,
-            htmlLabels:true
-        }
-};
-mermaid.initialize(config);
-window.mermaid.init(undefined, document.querySelectorAll('.language-mermaid'));
+    <script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11.4.1/+esm'
 </script>
+
   </body>
 </html>
